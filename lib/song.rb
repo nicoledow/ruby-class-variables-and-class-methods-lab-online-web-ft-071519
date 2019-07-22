@@ -39,6 +39,7 @@ class Song
         genre_tallies[genre] = 1
       end
     end
+    genre_tallies
   end
   
 end
