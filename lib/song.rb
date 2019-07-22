@@ -31,7 +31,14 @@ class Song
   
   #return a hash with genres as the keys, and # of songs in that genre as the values:
   def self.genre_count
-    
+    genre_counts = {}
+    @@genres.each do |genre|
+      if genre_counts.has_key?(genre)
+        genre_counts[genre] += 1
+      else
+        genre_counts[genre] = 1
+      end
+    end
   end
   
 end
