@@ -1,3 +1,5 @@
+require 'pry'
+
 class Song
   attr_reader :name, :artist, :genre
   
@@ -24,6 +26,13 @@ class Song
   
   def self.genres
     @@genres.uniq
+  end
+  
+  #return a hash with genres as the keys, and # of songs in that genre as the values:
+  def self.genre_count
+    @@genres.each do |genre|
+      binding.pry
+    end
   end
   
 end
