@@ -42,4 +42,17 @@ class Song
     genre_tallies
   end
   
+  #return a hash of artists and the num of songs from those artists:
+  def self.artist_count
+    artist_tallies = {}
+    @@artists.each do |artist|
+      if artist_tallies.has_key?(artist)
+        artist_tallies[artist] += 1
+      else
+        artist_tallies[artist] = 1
+      end
+    end
+    artist_tallies
+  end
+  
 end
